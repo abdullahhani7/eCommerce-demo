@@ -1,9 +1,11 @@
-import React from 'react'
+import Logo from "@assets/svg/cart.svg?react";
 
 const HeaderBacket = () => {
   return (
-    <div>HeaderBacket</div>
-  )
-}
+    <div>
+      <Logo title="basket icon" />
+    </div>
+  );
+};
 
-export default HeaderBacket
+export default HeaderBacket;
