@@ -1,0 +1,14 @@
+.headerContainer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 10px 0;
+}
+
+.headerContainer h1 {
+font-size: 2.3rem;
+}
+
+.headerContainer h1 span {
+margin-right: 10px;
+}
