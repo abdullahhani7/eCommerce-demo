@@ -6,7 +6,7 @@ import type { TCategory } from "@customTypes/category";
 const Category = ({ title, prefix, img }: TCategory) => {
   return (
     <div className={category}>
-      <Link to={`products/${prefix}`}>
+      <Link to={`/categories/products/${prefix}`}>
         <div className={categoryImg}>
           <img src={img} alt={title} />
         </div>

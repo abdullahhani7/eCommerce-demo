@@ -14,16 +14,19 @@ const Categories = () => {
     dispatch(actGetCategories());
   }, [dispatch]);
 
-  const categoriesList = records.map((record) => (
-    <Col
-      key={record.id}
-      xs={6}
-      md={3}
-      className="d-flex justify-content-center mb-5 mt-2"
-    >
-      <Category {...record} />
-    </Col>
-  ));
+  const categoriesList =
+    records.length > 0
+      ? records.map((record) => (
+          <Col
+            key={record.id}
+            xs={6}
+            md={3}
+            className="d-flex justify-content-center mb-5 mt-2"
+          >
+            <Category {...record} />
+          </Col>
+        ))
+      : "there are no categories to show";
 
   return (
     <Container>
