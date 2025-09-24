@@ -6,11 +6,13 @@ import About from "@pages/About";
 import Products from "@pages/Products";
 import Login from "@pages/Login";
 import Register from "@pages/Register";
+import ErrorPage from "@pages/ErrorPage";
 
 const router = createBrowserRouter([
   {
     path: "/",
     element: <MainLayout />,
+    errorElement: <ErrorPage />,
     children: [
       {
         index: true,
