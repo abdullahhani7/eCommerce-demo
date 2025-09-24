@@ -1,7 +1,6 @@
 import { Outlet } from "react-router-dom";
-import Header from "../../components/common/Header/Header";
+import { Header, Footer } from "@components/common";
 import { Container } from "react-bootstrap";
-import Footer from "@components/common/Footer/Footer";
 
 import styles from "./styles.module.css";
 const { container } = styles;
