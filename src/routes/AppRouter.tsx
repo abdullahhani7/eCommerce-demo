@@ -4,6 +4,8 @@ import Categories from "@pages/Categories";
 import Home from "@pages/Home";
 import About from "@pages/About";
 import Products from "@pages/Products";
+import Login from "@pages/Login";
+import Register from "@pages/Register";
 
 const router = createBrowserRouter([
   {
@@ -25,6 +27,14 @@ const router = createBrowserRouter([
       {
         path: "products/:prefix",
         element: <Products />,
+      },
+      {
+        path: "login",
+        element: <Login />,
+      },
+      {
+        path: "register",
+        element: <Register />,
       },
     ],
   },
