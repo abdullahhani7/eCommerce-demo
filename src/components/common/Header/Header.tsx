@@ -1,3 +1,4 @@
+import { NavLink } from "react-router-dom";
 import { Badge } from "react-bootstrap";
 import Container from "react-bootstrap/Container";
 import Nav from "react-bootstrap/Nav";
@@ -12,7 +13,8 @@ const Header = () => {
     <header>
       <div className={headerContainer}>
         <h1>
-          <span>our</span><Badge bg="info">Ecom</Badge>
+          <span>our</span>
+          <Badge bg="info">Ecom</Badge>
         </h1>
         <HeaderBacket />
       </div>
@@ -26,13 +28,23 @@ const Header = () => {
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
           <Navbar.Collapse id="basic-navbar-nav">
             <Nav className="me-auto">
-              <Nav.Link href="#home">Home</Nav.Link>
-              <Nav.Link href="#link">Categories</Nav.Link>
-              <Nav.Link href="#link">About</Nav.Link>
+              <Nav.Link as={NavLink} to="">
+                Home
+              </Nav.Link>
+              <Nav.Link as={NavLink} to="categories">
+                Categories
+              </Nav.Link>
+              <Nav.Link as={NavLink} to="about-us">
+                About
+              </Nav.Link>
             </Nav>
             <Nav>
-              <Nav.Link href="#home">Login</Nav.Link>
-              <Nav.Link href="#link">Register</Nav.Link>
+              <Nav.Link as={NavLink} to="login">
+                Login
+              </Nav.Link>
+              <Nav.Link as={NavLink} to="register">
+                Register
+              </Nav.Link>
             </Nav>
           </Navbar.Collapse>
         </Container>
