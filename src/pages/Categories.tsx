@@ -3,6 +3,7 @@ import { Category } from "@components/eCommerce";
 import { useAppDispatch, useAppSelector } from "@store/hooks";
 import { useEffect } from "react";
 import actGetCategories from "@store/categories/act/actGetCategories";
+import Loading from "@components/feedback/Loading";
 
 const Categories = () => {
   const dispatch = useAppDispatch();
@@ -11,8 +12,10 @@ const Categories = () => {
   );
 
   useEffect(() => {
-    dispatch(actGetCategories());
-  }, [dispatch]);
+    if (!records.length) {
+      dispatch(actGetCategories());
+    }
+  }, [dispatch, records]);
 
   const categoriesList =
     records.length > 0
@@ -30,7 +33,9 @@ const Categories = () => {
 
   return (
     <Container>
-      <Row>{categoriesList}</Row>
+      <Loading loading={loading} error={error}>
+        <Row>{categoriesList}</Row>
+      </Loading>
     </Container>
   );
 };
